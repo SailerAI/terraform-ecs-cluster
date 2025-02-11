@@ -40,15 +40,15 @@ variable "ssm_database_subnet_ids" {
 
 ## Variables Load Balancer
 
-variable "load_balancer_internal" {
-  description = "Se o load balancer é interno"
-  type        = bool
-}
-
-variable "load_balancer_type" {
-  description = "Tipo do load balancer"
-  type        = string
-}
+#variable "load_balancer_internal" {
+#  description = "Se o load balancer é interno"
+#  type        = bool
+#}
+#
+#variable "load_balancer_type" {
+#  description = "Tipo do load balancer"
+#  type        = string
+#}
 
 
 ##### ECS Variables
