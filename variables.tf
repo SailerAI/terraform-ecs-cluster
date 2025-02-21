@@ -15,28 +15,31 @@ variable "region" {
   type        = string
 }
 
+
+
+variable "capacity_providers" {
+  description = "Capacity providers"
+  type        = list(string)
+  default     = ["FARGATE", "FARGATE_SPOT"]
+}
 ## Variables VPCs SSM STORE
 
-variable "ssm_vpc_id" {
-  description = "ID do VPC"
-  type        = string
-}
+#variable "ssm_vpc_id" {
+#  description = "ID do VPC"
+#  type        = string
+#}
 
-variable "ssm_public_subnet_ids" {
-  description = "IDs das subredes públicas"
-  type        = list(string)
-  sensitive   = false
-}
+####}
 
-variable "ssm_private_subnet_ids" {
-  description = "IDs das subredes privadas"
-  type        = list(string)
-}
+#variable "ssm_private_subnet_ids" {
+#  description = "IDs das subredes privadas"
+#  type        = list(string)
+#}
 
-variable "ssm_database_subnet_ids" {
-  description = "IDs das subredes de banco de dados"
-  type        = list(string)
-}
+#variable "ssm_database_subnet_ids" {
+#  description = "IDs das subredes de banco de dados"
+#  type        = list(string)
+#}
 
 ## Variables Load Balancer
 
@@ -52,9 +55,3 @@ variable "ssm_database_subnet_ids" {
 
 
 ##### ECS Variables
-
-variable "capacity_providers" {
-  description = "Capacity providers"
-  type        = list(string)
-  default     = ["FARGATE", "FARGATE_SPOT"]
-}
